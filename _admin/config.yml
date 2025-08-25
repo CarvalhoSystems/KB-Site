@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway # Permite autenticação via Git
+  branch: main # A branch do seu repositório Git onde os arquivos serão salvos
+
+# Este bloco configura a autenticação e o nome do seu site no painel
+publish_mode: editorial_workflow # Permite rascunhos e revisão de conteúdo
+media_folder: "static/assets/uploads" # Onde as imagens e arquivos serão salvos
+public_folder: "/assets/uploads" # O caminho público para os arquivos de mídia
+
+# Aqui você define as "coleções" ou tipos de conteúdo do seu site
+collections:
+  - name: "blog" # ID da coleção, usado para referência
+    label: "Blog" # Nome que aparece no painel de administração
+    folder: "content/blog" # Pasta onde os arquivos de blog serão salvos
+    create: true # Permite a criação de novos posts
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Define a estrutura do nome do arquivo
+    fields: # Os campos do formulário para cada post
+      - {label: "Título", name: "title", widget: "string", required: true}
+      - {label: "Data", name: "date", widget: "datetime", required: true}
+      - {label: "Corpo", name: "body", widget: "markdown", required: true}
+      - {label: "Imagem de Destaque", name: "thumbnail", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+
+  - name: "pages"
+    label: "Páginas"
+    folder: "content/pages"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string", required: true}
+      - {label: "Caminho da URL", name: "path", widget: "string", required: true}
+      - {label: "Conteúdo", name: "body", widget: "markdown", required: true}
+
+      # ... (código existente)
+
+collections:
+  # ... (sua coleção de blog ou outras)
+
+  - name: "produtos"
+    label: "Produtos"
+    folder: "_produtos" # Pasta onde os arquivos de produtos serão salvos
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Nome do Produto", name: "title", widget: "string", required: true}
+      - {label: "Descrição", name: "body", widget: "markdown", required: false}
+      - {label: "Preço", name: "price", widget: "number", required: true}
+      - {label: "Imagem", name: "image", widget: "image", required: true}
+      - {label: "Detalhes Adicionais", name: "details", widget: "list", field: {label: "Detalhe", name: "detail", widget: "string"}}

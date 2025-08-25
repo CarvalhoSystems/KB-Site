@@ -1,0 +1,123 @@
+
+/* Arquivos CSS */
+/* Estilos Gerais */
+
+body {
+background-color: #fcf9f9;
+color: #010101;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+}
+
+
+header {
+background: #000000;
+color: #ffffff;
+padding: 10px 0;
+}
+
+header h1 {
+text-align: center;
+}
+
+nav {
+text-align: center;
+}
+
+nav ul {
+list-style: none;
+padding: 0;
+}
+
+nav ul li {
+display: inline;
+margin: 0 15px;
+}
+
+nav ul li a {
+color: #ffffff;
+text-decoration: none;
+}
+
+main {
+padding: 20px;
+}
+
+footer {
+background: #ffffff;
+color: #000000;
+text-align: center;
+padding: 10px 0;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+/*configurar o logo */
+header img {
+    width: 300px;
+    position: -ms-page;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+}
+@media (max-width: 600px) {
+    header img {
+        width: 150px;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* ...existing code... */
+.produtos-femininos {
+    padding: 40px 0;
+    text-align: center;
+}
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.produto {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
+}
+.produto:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+.produto h3 {
+    font-size: 1.1em;
+    margin: 10px 0 5px 0;
+}
+.produto p {
+    color: #e91e63;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.produto button {
+    background: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.produto button:hover {
+    background: #c2185b;
+}
+/* ...existing code... */
