@@ -21,7 +21,7 @@ const secaoFeminino = document.createElement("section");
 secaoFeminino.classList.add("produtos-femininos");
 
 const titulo = document.createElement("h2");
-titulo.textContent = "Coleção Verão 2026 - Feminino";
+titulo.textContent = "Coleção Fitness 2026 - Feminino";
 secaoFeminino.appendChild(titulo);
 
 const listaProdutos = document.createElement("div");
