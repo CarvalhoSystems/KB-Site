@@ -56,3 +56,6 @@ secaoFeminino.appendChild(listaProdutos);
 
 // Adiciona a seção ao main
 document.getElementById("produtos-femininos").appendChild(secaoFeminino);
+
+document.getElementById("botaoverdetalhes").addEventListener("click", botaoverdetalhes);
+function botaoverdetalhes() {
